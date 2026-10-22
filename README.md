@@ -2,11 +2,11 @@
 
 A small multi-tenant quoting tool for contractors. Someone at the company pastes in a customer enquiry, the AI drafts a quote from **that company's own price list**, and a person reviews, edits and approves it. Nothing is approved, priced or sent by the AI.
 
-- **Live app:** _TODO: add Vercel URL_
+- **Live app:** https://quotewise-eta.vercel.app
 - **Logins** (same password for all, sent separately by email):
   - Hollis Groundworks: `shaz@hollisgroundworks.example`, `dave@hollisgroundworks.example`
   - Gaz Green Landscapes (the second company): `gaz@gazgreen.example`
-- Add your Anthropic key under **Settings** for each company before drafting.
+- Add your Anthropic key under **Settings** for each company before drafting. No key is pre-loaded in production.
 
 ## How it works
 

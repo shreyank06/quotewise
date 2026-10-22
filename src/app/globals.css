@@ -1,26 +1,42 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Brand: a deep, earthy green that suits a groundworks trade without shouting. */
+  --color-brand-50: #eef6f1;
+  --color-brand-100: #d5eadd;
+  --color-brand-200: #aed5be;
+  --color-brand-500: #2f7d57;
+  --color-brand-600: #24684a;
+  --color-brand-700: #1d553c;
+  --color-brand-800: #17432f;
+  --color-brand-900: #0f2e20;
+
+  --color-canvas: #f6f5f2;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-canvas);
+  color: #1c1917;
+  font-feature-settings: "cv11", "ss01";
+}
+
+::selection {
+  background: var(--color-brand-100);
+}
+
+/* Inputs that read as text until you interact with them, used in the line-item editor. */
+.cell-input {
+  @apply w-full rounded-md border border-transparent bg-transparent px-2 py-1.5 text-sm transition outline-none;
+}
+.cell-input:hover:not(:read-only) {
+  @apply border-stone-200 bg-white;
+}
+.cell-input:focus:not(:read-only) {
+  @apply border-brand-500 bg-white ring-2 ring-brand-100;
+}
+.cell-input[aria-invalid="true"] {
+  @apply border-red-300 bg-red-50;
 }

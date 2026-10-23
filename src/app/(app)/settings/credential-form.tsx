@@ -21,6 +21,9 @@ export function CredentialForm({ current }: { current: { provider: AiProviderNam
         <Field label="Model" hint={`Leave blank for ${DEFAULT_MODELS[provider]}`}>
           <input
             name="model"
+            autoComplete="off"
+            data-1p-ignore
+            data-lpignore="true"
             defaultValue={current?.provider === provider ? current.model : ""}
             key={provider}
             placeholder={DEFAULT_MODELS[provider]}
@@ -29,7 +32,7 @@ export function CredentialForm({ current }: { current: { provider: AiProviderNam
         </Field>
       </div>
       <Field label={current ? "New API key" : "API key"} hint="Checked with the provider, then stored encrypted. It's never shown again or sent back to the browser.">
-        <input name="apiKey" type="password" autoComplete="off" required placeholder={provider === "anthropic" ? "sk-ant-…" : "sk-…"} className={inputClass} />
+        <input name="apiKey" type="password" autoComplete="new-password" data-1p-ignore data-lpignore="true" required placeholder={provider === "anthropic" ? "sk-ant-…" : "sk-…"} className={inputClass} />
       </Field>
       <FormMessage state={state} />
       <Button type="submit" variant="brand" disabled={pending}>

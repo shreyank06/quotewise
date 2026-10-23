@@ -3,6 +3,8 @@
 A small multi-tenant quoting tool for contractors. Someone at the company pastes in a customer enquiry, the AI drafts a quote from **that company's own price list**, and a person reviews, edits and approves it. Nothing is approved, priced or sent by the AI.
 
 - **Live app:** https://quotewise-eta.vercel.app
+- **Video walkthrough:** https://www.loom.com/share/e8c971d5f3d941aeb6c9281c291b979b
+- **Repo:** https://github.com/shreyank06/quotewise
 - **Logins** (same password for all, sent separately by email):
   - Hollis Groundworks: `shaz@hollisgroundworks.example`, `dave@hollisgroundworks.example`
   - Gaz Green Landscapes (the second company): `gaz@gazgreen.example`
@@ -42,7 +44,7 @@ The output schema (`src/core/quote-schema.ts`) is the contract. Because it has n
 
 ## The three enquiries
 
-Actual output from `npm run enquiries` with `claude-opus-5-5` (each took 10–25 s):
+Output from one run of `npm run enquiries` with `claude-opus-5-5` (each took 10–25 s). Quantities, and so totals, vary a little between runs because the AI estimates them (e.g. a live run of Okafor came to £3,956.59 inc VAT); the rates, rules and flags stay the same:
 
 **1. Okafor driveway extension → priced draft, £3,002.16 + VAT = £3,602.59**
 - Matched as a repeat customer by her *second* email address, which only works because the duplicate rows were merged.

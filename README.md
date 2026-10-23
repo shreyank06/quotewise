@@ -3,8 +3,7 @@
 A small multi-tenant quoting tool for contractors. Someone at the company pastes in a customer enquiry, the AI drafts a quote from **that company's own price list**, and a person reviews, edits and approves it. Nothing is approved, priced or sent by the AI.
 
 - **Live app:** https://quotewise-eta.vercel.app
-- **Video walkthrough (three enquiries):** https://www.loom.com/share/81a4400dd8db4052891b16b3900a7a93
-- **Video (app overview):** https://www.loom.com/share/e8c971d5f3d941aeb6c9281c291b979b
+- **Video walkthrough:** https://www.loom.com/share/81a4400dd8db4052891b16b3900a7a93
 - **Repo:** https://github.com/shreyank06/quotewise
 - **Logins** (same password for all, sent separately by email):
   - Hollis Groundworks: `shaz@hollisgroundworks.example`, `dave@hollisgroundworks.example`

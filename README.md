@@ -150,4 +150,15 @@ Deploy: a Neon Postgres database plus Vercel. Set the same three env vars in Ver
 
 ## How I used AI tools
 
-_TODO: write in your own words._ Suggested points: what you used Claude Code / other tools for (scaffolding, CSV edge-case rules, test writing, reviewing the security model), what you checked or changed by hand, and where you disagreed with it.
+I used Claude Code (Claude Opus) as a pair programmer throughout.
+
+  - **Design and scaffolding:** stack, the per-company data model, and the split between
+    what the AI decides and what code decides.
+  - **CSV cleanup:** it listed the edge cases. I chose the rules, and sent anything
+    unclear to "Needs review" instead of guessing.
+  - **Safety:** the output schema has no price, discount or approval fields, so the
+    Kestrel Row injection can't do anything.
+  - **Tests:** it drafted them, and I checked what they cover.
+  - **Live testing:** I ran all three enquiries by hand. That found a browser autofill
+    bug in the API key form, which I fixed with Claude.
+
